@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.title{
+   height: 10%;
+   display: flex;
+   align-items: center;
+}
+.title img{
+    width: 24px;
+    margin-left: 4px;
+} 
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(150, 141, 134);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.todoapp{
+    background-color: #ffffff;
+    padding: 20px 20px;  /*Top and bottom then left and right    */
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 440px;
+    height: 80vh;
+}
+.box{
+    max-width: 440px;
+    width: 100%;
+}
+.row{
+    height: 10%;
+    display: flex;
+    width: 100%;
+    padding: 7px;
+}
+#input-box{
+    flex: 1;
+    height: 30px;
+    padding: 0 10px;
+}
+button{
+    border: none;
+    outline: none;
+    background-color: #7ffb2c;
+    padding: 0 10px;
+    margin-left: 3px;
+    color: #0c0c0b;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 3px;
+}
+button:hover{
+    background-color: #008631;
+}
+.scroll{
+   height: 80%;
+   width: 100%;
+   overflow-y: scroll;
+   scrollbar-color: rgb(255, 0, 0) rgb(224, 224, 224);
+}
+ul li{
+    list-style: none;
+    padding: 7px 5px;
+    padding-left: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-top: 5px;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #000;
+    left: 5px;
+}
+ul li.checked{
+    color: #5f5f5f;
+    text-decoration: line-through;
+    background-color: #a2f5a2;
+    border-radius: 20px;
+}
+ul .checked::before{
+    background-image: url(check.png);
+    border: none;
+}
+ul li:hover{
+    background-color: #d4d4d4;
+    border-radius: 30px;
+}
+.close{
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    margin-left: 7px;
+    margin-right: 10px;
+}
+@media screen and (max-width:489px) {
+
+.container{
+        width: 100%;
+        height: 100vh;
+    }
+
+.box{
+        max-width: 340px;
+        width: 100%;
+    }
+    
+.todo-app{
+        width: 340px;
+    }
+}
+ul li.editing {
+    background-color: #e0e0e0;
+}
+
+ul li .edit-input {
+    width: calc(100% - 30px); /* To Adjust width to fit within the li, accounting for the close button */
+    border: none;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul li.editing .edit-input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+ul li span {
+    display: inline;
+}
+
+ul li .close {
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    margin-left: 7px;
+    margin-right: 10px;
+}
+ul li .date-picker {
+    border: 2px solid rgb(202, 110, 110);
+    border-radius: 4px;
+    background-color: rgb(242, 89, 89);
+    padding: 4px;
+}
+.end-date-label {
+    margin-right: 5px;
+    font-size: 12px;
+    color: #333;
+    vertical-align: middle;
+}
+
+/* Ensure spacing for date picker */
+.date-picker {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
